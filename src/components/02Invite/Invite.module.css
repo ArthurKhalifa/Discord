@@ -1,0 +1,100 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    justify-content: center;
+}
+
+.div {
+    width: 800px;
+    height: 380px;
+    color: white;
+    display: flex;
+    border-radius: 5px;
+    background-color: #252A30;
+}
+
+.flash {
+    width: 60px;
+}
+
+.icon{
+   width: auto;
+   height: 16px;
+}
+
+.left {
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+p {
+    color: rgb(173, 173, 173);
+}
+
+.parag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.way {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    background-color: #2e66aa;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+span {
+    font-weight: bold;
+}
+
+.btn:hover {
+    color: #2e66aa;
+    background-color: #fff;
+}
+
+.href {
+    text-align: center;
+    color: #3b7fd1;
+    text-decoration: none;
+}
+
+.href:hover {
+    color: #fff;
+}
+
+.right {
+    width: 60%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.link {
+    text-decoration: none;
+}
