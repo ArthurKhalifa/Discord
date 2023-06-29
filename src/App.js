@@ -13,8 +13,16 @@ import Done from './components/08Done/Done'
 
 import './App.css';
 
+const FormTemplate = {
+  name: "",
+  email: "",
+  review: "",
+  comment: "",
+}
 
 function App() {
+
+  const [data, setData] = useState(FormTemplate);
 
   return (
 

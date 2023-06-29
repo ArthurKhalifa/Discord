@@ -32,7 +32,12 @@ export default function Id() {
     }
     // =============================================
 
+    const troca = () => {
+        setState(!state);
+    }
+
     return (
+
         <div className={style.container}>
             <div className={style.div}>
                 <div className={style.header}>
@@ -40,7 +45,7 @@ export default function Id() {
                     <h2>Como você se identifica?</h2>
                 </div>
                 <div className={style.select} >
-                    <button className={state ? style.toggle : style.notoggle} onClick={toggle}>
+                    <button className={state ? style.toggle : style.notoggle} onClick={troca}>
                         <div className={style.opt}>
                             <div className={style.show}>
                                 <p className={style.pshow}>+61 pessoas em comum</p>

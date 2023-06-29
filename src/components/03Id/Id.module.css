@@ -48,7 +48,6 @@
 .opt {
     display: flex;
     align-items: center;
-    justify-content: c;
     gap: 15px;
     width: 250px;
     padding: 10px;
@@ -66,6 +65,10 @@
 
 .opt p {
     font-weight: bold;
+}
+
+.active {
+    background-color: red;
 }
 
 /*== SHOW's ==*/
@@ -201,6 +204,7 @@
 .toggle {
     background-color: #181c20;
     border: none;
+
     .show {
         display: flex;
     }
@@ -215,6 +219,7 @@
 .toggle2 {
     background-color: #181c20;
     border: none;
+
     .show2 {
         display: flex;
     }
@@ -224,6 +229,7 @@
 .toggle3 {
     background-color: #181c20;
     border: none;
+
     .show3 {
         display: flex;
     }
@@ -233,12 +239,19 @@
 .toggle4 {
     background-color: #181c20;
     border: none;
+
     .show4 {
         display: flex;
     }
 }
 
 /*= Repeat Original =*/
+.toggle {
+    .opt {
+        border: 2px solid white;
+    }
+}
+
 .toggle2 {
     .opt {
         border: 2px solid white;
@@ -257,4 +270,9 @@
     .opt {
         border: 2px solid white;
     }
+}
+
+
+.opt.ativado {
+    background-color: red;
 }
