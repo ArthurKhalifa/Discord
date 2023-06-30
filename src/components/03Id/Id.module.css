@@ -158,6 +158,11 @@
     gap: 20px;
 }
 
+.bold{
+    color: white;
+    font-weight: bold;
+}
+
 .btn {
     display: flex;
     align-items: center;
@@ -201,7 +206,63 @@
 
 /*== SHOW and HIDDING SHOW CLASS ==*/
 
-.toggle {
+/***/
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.ativo {
+    background-color: #181c20;
+    border: none;
+    border-radius: 5px;
+
+
+    .show {
+        display: flex;
+
+    }
+}
+
+.ativo,
+.ativo2,
+.ativo3,
+.ativo4 {
+    .opt {
+        border: 2px solid white;
+    }
+}
+
+.ativo2 {
+    background-color: #181c20;
+    border: none;
+    border-radius: 5px;
+    .show2 {
+        display: flex;
+    }
+}
+/**/
+.ativo3 {
+    background-color: #181c20;
+    border: none;
+    border-radius: 5px;
+    .show3 {
+        display: flex;
+    }
+}
+/**/
+.ativo4 {
+    background-color: #181c20;
+    border: none;
+    border-radius: 5px;
+    .show4 {
+        display: flex;
+    }
+}
+
+/***/
+
+/* .toggle {
     background-color: #181c20;
     border: none;
 
@@ -213,10 +274,10 @@
 .notoggle {
     background-color: transparent;
     border: none;
-}
+} */
 
 /*= Repeat Original =*/
-.toggle2 {
+/* .toggle2 {
     background-color: #181c20;
     border: none;
 
@@ -225,7 +286,7 @@
     }
 }
 
-/**/
+
 .toggle3 {
     background-color: #181c20;
     border: none;
@@ -235,7 +296,7 @@
     }
 }
 
-/**/
+
 .toggle4 {
     background-color: #181c20;
     border: none;
@@ -243,10 +304,10 @@
     .show4 {
         display: flex;
     }
-}
+} */
 
 /*= Repeat Original =*/
-.toggle {
+/* .toggle {
     .opt {
         border: 2px solid white;
     }
@@ -258,14 +319,14 @@
     }
 }
 
-/**/
+
 .toggle3 {
     .opt {
         border: 2px solid white;
     }
 }
 
-/**/
+
 .toggle4 {
     .opt {
         border: 2px solid white;
@@ -275,4 +336,4 @@
 
 .opt.ativado {
     background-color: red;
-}
+} */

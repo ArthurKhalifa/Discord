@@ -152,6 +152,11 @@
     gap: 20px;
 }
 
+.bold {
+    color: white;
+    font-weight: bold;
+}
+
 .btn {
     display: flex;
     align-items: center;
@@ -195,24 +200,21 @@
 
 /*== SHOW and HIDDING SHOW CLASS ==*/
 
-.toggle {
+.ativo {
     background-color: #181c20;
     border: none;
+    border-radius: 5px;
 
     .show {
         display: flex;
     }
 }
 
-.notoggle {
-    background-color: transparent;
-    border: none;
-}
-
-/*= Repeat Original =*/
-.toggle2 {
+/**/
+.ativo2 {
     background-color: #181c20;
     border: none;
+    border-radius: 5px;
 
     .show2 {
         display: flex;
@@ -220,9 +222,10 @@
 }
 
 /**/
-.toggle3 {
+.ativo3 {
     background-color: #181c20;
     border: none;
+    border-radius: 5px;
 
     .show3 {
         display: flex;
@@ -230,31 +233,20 @@
 }
 
 /**/
-.toggle4 {
+.ativo4 {
     background-color: #181c20;
     border: none;
+    border-radius: 5px;
 
     .show4 {
         display: flex;
     }
 }
 
-/*= Repeat Original =*/
-.toggle2 {
-    .opt {
-        border: 2px solid white;
-    }
-}
-
-/**/
-.toggle3 {
-    .opt {
-        border: 2px solid white;
-    }
-}
-
-/**/
-.toggle4 {
+.ativo,
+.ativo2,
+.ativo3,
+.ativo4 {
     .opt {
         border: 2px solid white;
     }

@@ -12,29 +12,15 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 export default function Id() {
+    
+    const [botaoAtivo, setBotaoAtivo] = useState(null);
+    const [info, setInfo] = useState('');
 
-    const [state, setState] = useState(false);
-    const [state2, setState2] = useState(false);
-    const [state3, setState3] = useState(false);
-    const [state4, setState4] = useState(false);
-
-    const toggle = () => {
-        state ? setState(false) : setState(true);
-    }
-    const toggle2 = () => {
-        state2 ? setState2(false) : setState2(true);
-    }
-    const toggle3 = () => {
-        state3 ? setState3(false) : setState3(true);
-    }
-    const toggle4 = () => {
-        state4 ? setState4(false) : setState4(true);
-    }
-    // =============================================
-
-    const troca = () => {
-        setState(!state);
-    }
+    const handleClick = (botao) => {
+        setBotaoAtivo(botao);
+        setInfo(botao);
+    };
+    // =====================
 
     return (
 
@@ -45,7 +31,7 @@ export default function Id() {
                     <h2>Como você se identifica?</h2>
                 </div>
                 <div className={style.select} >
-                    <button className={state ? style.toggle : style.notoggle} onClick={troca}>
+                    <button className={botaoAtivo === ' | Masculino | ' ? style.ativo : ''} onClick={() => handleClick(' | Masculino | ')}>
                         <div className={style.opt}>
                             <div className={style.show}>
                                 <p className={style.pshow}>+61 pessoas em comum</p>
@@ -56,7 +42,7 @@ export default function Id() {
                         </div>
                     </button>
                     {/* */}
-                    <button className={state2 ? style.toggle2 : style.notoggle} onClick={toggle2}>
+                    <button className={botaoAtivo === ' | Feminino | ' ? style.ativo2 : ''} onClick={() => handleClick(' | Feminino | ')}>
                         <div className={style.opt}>
                             <div className={style.show2}>
                                 <p className={style.pshow}>+100 pessoas em comum</p>
@@ -67,7 +53,7 @@ export default function Id() {
                         </div>
                     </button>
                     {/* */}
-                    <button className={state3 ? style.toggle3 : style.notoggle} onClick={toggle3}>
+                    <button className={botaoAtivo === ' | Outro | ' ? style.ativo3 : ''} onClick={() => handleClick(' | Outro | ')}>
                         <div className={style.opt}>
                             <div className={style.show3}>
                                 <p className={style.pshow}>+08 pessoas em comum</p>
@@ -78,7 +64,7 @@ export default function Id() {
                         </div>
                     </button>
                     {/* */}
-                    <button className={state4 ? style.toggle4 : style.notoggle} onClick={toggle4}>
+                    <button className={botaoAtivo === ' | Prefiro não responder | ' ? style.ativo4 : ''} onClick={() => handleClick(' | Prefiro não responder | ')}>
                         <div className={style.opt}>
                             <div className={style.show4} >
                                 <p className={style.pshow}>+12 pessoas em comum</p>
@@ -96,7 +82,7 @@ export default function Id() {
                     <Link to='/Invite' className={style.link}><button className={style.btn2}><AiOutlineArrowLeft />Voltar</button></Link>
                 </div>
                 <div className={style.next}>
-                    <p>Você recebeu o cargo <span></span></p>
+                    <p>Você recebeu o cargo<span className={style.bold}>{info}</span></p>
                     <Link to='/Doing' className={style.link}><button className={style.btn}>Proximo
                         <AiOutlineArrowRight />
                     </button></Link>

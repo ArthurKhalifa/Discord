@@ -36,7 +36,11 @@ export default function Doing() {
         state5 ? setState5(false) : setState5(true);
     }
     // =============================================
+    const [info, setInfo] = useState('');
 
+    const handleClick = (botao) => {
+        setInfo(botao);
+    };
 
     return (
         <div className={style.container}>
@@ -47,29 +51,29 @@ export default function Doing() {
                 </div>
                 <div className={style.select} >
                     <button className={state ? style.toggle : style.notoggle} onClick={toggle}>
-                        <div className={style.opt}>
+                        <div className={style.opt} onClick={() => handleClick(' | Curioso | ')}>
                             <div className={style.show}>
                                 <p className={style.pshow}>+13 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
                             </div>
                             <img src={thinking} className={style.img} />
-                            <p>Dúvidas sobre</p>
+                            <p>Curioso</p>
                         </div>
                     </button>
                     {/* */}
                     <button className={state2 ? style.toggle2 : style.notoggle} onClick={toggle2}>
-                        <div className={style.opt}>
+                        <div className={style.opt} onClick={() => handleClick(' | Trabalhando na área | ')}>
                             <div className={style.show2}>
                                 <p className={style.pshow}>+56 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
                             </div>
                             <img src={work} className={style.img} />
-                            <p>Trabalho</p>
+                            <p>Trabalhando na área</p>
                         </div>
                     </button>
                     {/* */}
                     <button className={state3 ? style.toggle3 : style.notoggle} onClick={toggle3}>
-                        <div className={style.opt}>
+                        <div className={style.opt} onClick={() => handleClick(' | Faculdade | ')}>
                             <div className={style.show3}>
                                 <p className={style.pshow}>+43 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -80,7 +84,7 @@ export default function Doing() {
                     </button>
                     {/* */}
                     <button className={state4 ? style.toggle4 : style.notoggle} onClick={toggle4}>
-                        <div className={style.opt}>
+                        <div className={style.opt} onClick={() => handleClick(' | Freelance | ')}>
                             <div className={style.show4}>
                                 <p className={style.pshow}>+21 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -91,7 +95,7 @@ export default function Doing() {
                     </button>
                     {/* */}
                     <button className={state5 ? style.toggle5 : style.notoggle} onClick={toggle5}>
-                        <div className={style.opt}>
+                        <div className={style.opt} onClick={() => handleClick(' | Estudando por conta própria | ')}>
                             <div className={style.show5}>
                                 <p className={style.pshow}>+48 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -104,13 +108,17 @@ export default function Doing() {
             </div>
             <div className={style.footer}>
                 <div className={style.back}>
-                    <Link to='/Id' className={style.link}><button className={style.btn2}><AiOutlineArrowLeft />Voltar</button></Link>
+                    <Link to='/Id' className={style.link}>
+                        <button className={style.btn2}><AiOutlineArrowLeft />Voltar</button>
+                    </Link>
                 </div>
                 <div className={style.next}>
-                    <p>Você recebeu o cargo <span></span></p>
-                    <Link to='/Area' className={style.link}><button className={style.btn}>Proximo
-                        <AiOutlineArrowRight />
-                    </button></Link>
+                    <p>Você recebeu o cargo<span className={style.bold}>{info}</span></p>
+                    <Link to='/Area' className={style.link}>
+                        <button className={style.btn}>Proximo
+                            <AiOutlineArrowRight />
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

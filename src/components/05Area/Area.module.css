@@ -204,6 +204,11 @@
     gap: 20px;
 }
 
+.bold {
+    color: white;
+    font-weight: bold;
+}
+
 .btn {
     display: flex;
     align-items: center;
@@ -300,6 +305,7 @@
         display: flex;
     }
 }
+
 /**/
 .toggle6 {
     background-color: #181c20;
@@ -309,6 +315,7 @@
         display: flex;
     }
 }
+
 /**/
 .toggle7 {
     background-color: #181c20;
@@ -318,6 +325,7 @@
         display: flex;
     }
 }
+
 /**/
 .toggle8 {
     background-color: #181c20;
@@ -361,18 +369,21 @@
         border: 2px solid white;
     }
 }
+
 /**/
 .toggle6 {
     .opt {
         border: 2px solid white;
     }
 }
+
 /**/
 .toggle7 {
     .opt {
         border: 2px solid white;
     }
 }
+
 /**/
 .toggle8 {
     .opt {
