@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 export default function Id() {
-    
+
     const [botaoAtivo, setBotaoAtivo] = useState(null);
     const [info, setInfo] = useState('');
 
@@ -21,6 +21,14 @@ export default function Id() {
         setInfo(botao);
     };
     // =====================
+
+
+    const [buttonClicked, setButtonClicked] = useState(false);
+
+
+    const handleButtonClick = () => {
+        setButtonClicked(true);
+    };
 
     return (
 
@@ -31,8 +39,8 @@ export default function Id() {
                     <h2>Como você se identifica?</h2>
                 </div>
                 <div className={style.select} >
-                    <button className={botaoAtivo === ' | Masculino | ' ? style.ativo : ''} onClick={() => handleClick(' | Masculino | ')}>
-                        <div className={style.opt}>
+                    <button className={botaoAtivo === ' Masculino ' ? style.ativo : ''} onClick={() => handleClick(' Masculino ')}>
+                        <div className={style.opt} onClick={handleButtonClick}>
                             <div className={style.show}>
                                 <p className={style.pshow}>+61 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -42,8 +50,8 @@ export default function Id() {
                         </div>
                     </button>
                     {/* */}
-                    <button className={botaoAtivo === ' | Feminino | ' ? style.ativo2 : ''} onClick={() => handleClick(' | Feminino | ')}>
-                        <div className={style.opt}>
+                    <button className={botaoAtivo === ' Feminino ' ? style.ativo2 : ''} onClick={() => handleClick(' Feminino ')}>
+                        <div className={style.opt} onClick={handleButtonClick}>
                             <div className={style.show2}>
                                 <p className={style.pshow}>+100 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -53,8 +61,8 @@ export default function Id() {
                         </div>
                     </button>
                     {/* */}
-                    <button className={botaoAtivo === ' | Outro | ' ? style.ativo3 : ''} onClick={() => handleClick(' | Outro | ')}>
-                        <div className={style.opt}>
+                    <button className={botaoAtivo === ' Outro ' ? style.ativo3 : ''} onClick={() => handleClick(' Outro ')}>
+                        <div className={style.opt} onClick={handleButtonClick}>
                             <div className={style.show3}>
                                 <p className={style.pshow}>+08 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -64,8 +72,8 @@ export default function Id() {
                         </div>
                     </button>
                     {/* */}
-                    <button className={botaoAtivo === ' | Prefiro não responder | ' ? style.ativo4 : ''} onClick={() => handleClick(' | Prefiro não responder | ')}>
-                        <div className={style.opt}>
+                    <button className={botaoAtivo === ' Prefiro não responder ' ? style.ativo4 : ''} onClick={() => handleClick(' Prefiro não responder ')}>
+                        <div className={style.opt} onClick={handleButtonClick}>
                             <div className={style.show4} >
                                 <p className={style.pshow}>+12 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -83,9 +91,14 @@ export default function Id() {
                 </div>
                 <div className={style.next}>
                     <p>Você recebeu o cargo<span className={style.bold}>{info}</span></p>
-                    <Link to='/Doing' className={style.link}><button className={style.btn}>Proximo
-                        <AiOutlineArrowRight />
-                    </button></Link>
+                    {buttonClicked ? (
+                        <Link to="/Doing" className={style.link}>
+                            <button className={style.btn}>Avançar <AiOutlineArrowRight /></button>
+                        </Link>
+                    ) : (
+                        <button disabled className={style.btnOff}>Avançar <AiOutlineArrowRight /></button>
+                    )}
+
                 </div>
 
             </div>

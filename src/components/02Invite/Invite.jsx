@@ -13,7 +13,7 @@ export default function Invite() {
                 <div className={style.left}>
                     <img src={flash} className={style.flash} />
                     <p>Você foi convidado(a) para entrar</p>
-                    <h2>Flash Code | PT-BR</h2>
+                    <h2>Lightning Code | PT-BR</h2>
                     {/* */}
                     <div className={style.parag}>
                         <img src={icon} className={style.icon} />
@@ -23,7 +23,7 @@ export default function Invite() {
                     {/* */}
                     <div className={style.way}>
                         <Link to='/Id' className={style.link}><button className={style.btn}>
-                            Entrar em <span>Flash Code | PT-BR</span>
+                            Entrar em <span>Lightning Code | PT-BR</span>
                         </button>
                         </Link>
                         <Link to='/' className={style.link}><a href="" className={style.href}>Hoje não</a></Link>

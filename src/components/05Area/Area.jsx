@@ -53,11 +53,17 @@ export default function Area() {
     }
 
     // =============================================
-    const [info, setInfo] = useState('');
-
+    const [textos, setTextos] = useState([]);
     const handleClick = (botao) => {
-        setInfo(botao);
+
+        if (textos.includes(botao)) {
+            setTextos(textos.filter((texto) => texto !== botao));
+        } else {
+            setTextos([...textos, botao]);
+        }
     };
+
+    const isButtonEnabled = textos.length > 0;
 
     return (
         <div className={style.container}>
@@ -68,7 +74,7 @@ export default function Area() {
                 </div>
                 <div className={style.select} >
                     <button className={state ? style.toggle : style.notoggle} onClick={toggle}>
-                        <div className={style.opt} onClick={() => handleClick(' | Front-End | ')}>
+                        <div className={style.opt} onClick={() => handleClick(' Front-End ')}>
                             <div className={style.show}>
                                 <p className={style.pshow}>+45 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -80,7 +86,7 @@ export default function Area() {
 
                     {/* */}
                     <button className={state2 ? style.toggle2 : style.notoggle} onClick={toggle2}>
-                        <div className={style.opt} onClick={() => handleClick(' | Back-End | ')}>
+                        <div className={style.opt} onClick={() => handleClick(' Back-End ')}>
                             <div className={style.show2}>
                                 <p className={style.pshow}>+51 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -92,7 +98,7 @@ export default function Area() {
 
                     {/* */}
                     <button className={state3 ? style.toggle3 : style.notoggle} onClick={toggle3}>
-                        <div className={style.opt} onClick={() => handleClick(' | Full-Stack | ')}>
+                        <div className={style.opt} onClick={() => handleClick(' Full-Stack ')}>
                             <div className={style.show3}>
                                 <p className={style.pshow}>+38 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -104,7 +110,7 @@ export default function Area() {
 
                     {/* */}
                     <button className={state4 ? style.toggle4 : style.notoggle} onClick={toggle4}>
-                        <div className={style.opt} onClick={() => handleClick(' | Mobile IOS | ')}>
+                        <div className={style.opt} onClick={() => handleClick(' Mobile IOS ')}>
                             <div className={style.show4}>
                                 <p className={style.pshow}>+24 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -116,7 +122,7 @@ export default function Area() {
 
                     {/* */}
                     <button className={state5 ? style.toggle5 : style.notoggle} onClick={toggle5}>
-                        <div className={style.opt} onClick={() => handleClick(' | Mobile Android | ')}>
+                        <div className={style.opt} onClick={() => handleClick(' Mobile Android ')}>
                             <div className={style.show5}>
                                 <p className={style.pshow}>+19 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -128,7 +134,7 @@ export default function Area() {
 
                     {/* */}
                     <button className={state6 ? style.toggle6 : style.notoggle} onClick={toggle6}>
-                        <div className={style.opt} onClick={() => handleClick(' | Data Science | ')}>
+                        <div className={style.opt} onClick={() => handleClick(' Data Science ')}>
                             <div className={style.show6}>
                                 <p className={style.pshow}>+27 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -140,7 +146,7 @@ export default function Area() {
 
                     {/* */}
                     <button className={state7 ? style.toggle7 : style.notoggle} onClick={toggle7}>
-                        <div className={style.opt} onClick={() => handleClick(' | Banco de Dados | ')}>
+                        <div className={style.opt} onClick={() => handleClick(' Banco de Dados ')}>
                             <div className={style.show7}>
                                 <p className={style.pshow}>+32 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -152,7 +158,7 @@ export default function Area() {
 
                     {/* */}
                     <button className={state8 ? style.toggle8 : style.notoggle} onClick={toggle8}>
-                        <div className={style.opt} onClick={() => handleClick(' | GameDev | ')}>
+                        <div className={style.opt} onClick={() => handleClick(' GameDev ')}>
                             <div className={style.show8}>
                                 <p className={style.pshow}>+23 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -172,10 +178,10 @@ export default function Area() {
                     </Link>
                 </div>
                 <div className={style.next}>
-                    <p>Você recebeu o cargo <span className={style.bold}>{info}</span></p>
-                    <Link to='/Level' className={style.link}>
-                        <button className={style.btn}>Proximo
-                            <AiOutlineArrowRight />
+                    <p>Você recebeu o cargo <span className={style.bold}>{textos.join(' + ')}</span></p>
+                    <Link to={isButtonEnabled ? '/Level' : '#'} className={style.link}>
+                        <button className={isButtonEnabled ? style.btn : style.btnOff} disabled={!isButtonEnabled}>
+                            Avançar <AiOutlineArrowRight />
                         </button>
                     </Link>
                 </div>

@@ -175,6 +175,19 @@
     color: #2e66aa;
 }
 
+
+.btnOff {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #2a4c75;
+    color: rgb(182, 182, 182);
+    border: none;
+    border-radius: 2px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
 .btn2 {
     display: flex;
     align-items: center;

@@ -23,6 +23,12 @@ export default function Level() {
         setInfo(botao);
     };
 
+    const [buttonClicked, setButtonClicked] = useState(false);
+
+
+    const handleButtonClick = () => {
+        setButtonClicked(true);
+    };
     return (
         <div className={style.container}>
             <div className={style.div}>
@@ -31,8 +37,8 @@ export default function Level() {
                     <h2>Qual seu nível na programação?</h2>
                 </div>
                 <div className={style.select} >
-                    <button className={botaoAtivo === ' | Iniciante | ' ? style.ativo : ''} onClick={() => handleClick(' | Iniciante | ')}>
-                        <div className={style.opt}>
+                    <button className={botaoAtivo === ' Iniciante ' ? style.ativo : ''} onClick={() => handleClick(' Iniciante ')}>
+                        <div className={style.opt} onClick={handleButtonClick}>
                             <div className={style.show}>
                                 <p className={style.pshow}>+23 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -42,8 +48,8 @@ export default function Level() {
                         </div>
                     </button>
                     {/* */}
-                    <button className={botaoAtivo === ' | Junior | ' ? style.ativo2 : ''} onClick={() => handleClick(' | Junior | ')}>
-                        <div className={style.opt} >
+                    <button className={botaoAtivo === ' Junior ' ? style.ativo2 : ''} onClick={() => handleClick(' Junior ')}>
+                        <div className={style.opt} onClick={handleButtonClick} >
                             <div className={style.show2}>
                                 <p className={style.pshow}>+67 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -53,8 +59,8 @@ export default function Level() {
                         </div>
                     </button>
                     {/* */}
-                    <button className={botaoAtivo === ' | Pleno | ' ? style.ativo3 : ''} onClick={() => handleClick(' | Pleno | ')}>
-                        <div className={style.opt} >
+                    <button className={botaoAtivo === ' Pleno ' ? style.ativo3 : ''} onClick={() => handleClick(' Pleno ')}>
+                        <div className={style.opt} onClick={handleButtonClick} >
                             <div className={style.show3}>
                                 <p className={style.pshow}>+32 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -64,8 +70,8 @@ export default function Level() {
                         </div>
                     </button>
                     {/* */}
-                    <button className={botaoAtivo === ' | Sênior | ' ? style.ativo4 : ''} onClick={() => handleClick(' | Sênior | ')}>
-                        <div className={style.opt}>
+                    <button className={botaoAtivo === ' Sênior ' ? style.ativo4 : ''} onClick={() => handleClick(' Sênior ')}>
+                        <div className={style.opt} onClick={handleButtonClick}>
                             <div className={style.show4}>
                                 <p className={style.pshow}>+38 pessoas em comum</p>
                                 <img src={yes} className={style.icon} />
@@ -84,11 +90,13 @@ export default function Level() {
                 </div>
                 <div className={style.next}>
                     <p>Você recebeu o cargo <span className={style.bold}>{info}</span></p>
-                    <Link to='/Accept' className={style.link}>
-                        <button className={style.btn}>Proximo
-                            <AiOutlineArrowRight />
-                        </button>
-                    </Link>
+                    {buttonClicked ? (
+                        <Link to="/Accept" className={style.link}>
+                            <button className={style.btn}>Avançar <AiOutlineArrowRight /></button>
+                        </Link>
+                    ) : (
+                        <button disabled className={style.btnOff}>Avançar <AiOutlineArrowRight /></button>
+                    )}
                 </div>
             </div>
 
