@@ -1,0 +1,634 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #30373f;
+    position: relative;
+    overflow-y: hidden;
+}
+
+body {
+    background-color: #30373f;
+}
+
+.left {
+    width: 90px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #1e2124;
+}
+
+
+.msg {
+    border-bottom: 2px solid gray;
+}
+
+.server {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.msgIcon {
+    margin-top: 10px;
+    width: 50px;
+    padding: 5px;
+    background-color: #cc0505;
+    border-radius: 40%;
+    cursor: pointer;
+}
+
+.msgIcon:hover {
+    border-radius: 20%;
+}
+
+.serverIconF {
+    width: 50px;
+    padding: 5px;
+    border-radius: 40%;
+    cursor: pointer;
+    background-color: #7F2121;
+}
+
+.serverIconF:hover {
+    border-radius: 20%;
+}
+
+.serverIconC {
+    width: 50px;
+    padding: 5px;
+    border-radius: 40%;
+    cursor: pointer;
+    background-color: #F4B905;
+}
+
+.serverIconC:hover {
+    border-radius: 20%;
+}
+
+.serverIcon {
+    width: 50px;
+    padding: 5px;
+    border-radius: 40%;
+    cursor: pointer;
+    background-color: rgb(66, 64, 161);
+}
+
+.serverIconL {
+    width: 50px;
+    padding: 5px;
+    border-radius: 40%;
+    cursor: pointer;
+    background-color: #009AE5;
+}
+
+.serverIconA {
+    width: 50px;
+    padding: 5px;
+    border-radius: 40%;
+    cursor: pointer;
+    background-color: rgb(11, 11, 14);
+}
+
+.serverIconL:hover {
+    border-radius: 20%;
+}
+
+.serverIconE {
+    width: 50px;
+    padding: 5px;
+    border-radius: 40%;
+    cursor: pointer;
+    background-color: rgb(50, 74, 207);
+}
+
+.serverIconE:hover {
+    border-radius: 20%;
+}
+
+.serverIconA:hover {
+    border-radius: 20%;
+}
+
+.serverIcon:hover {
+    border-radius: 20%;
+}
+
+.two {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.act {
+    display: flex;
+    background-color: #424549;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.act:hover {
+    border-radius: 30%;
+    background-color: #7FFF00;
+}
+
+.left2 {
+    position: relative;
+    width: 100%;
+}
+
+.config {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: #1d2227;
+    padding: 7px;
+    border-top: 1px solid gray;
+    gap: 10px;
+    bottom: 25px;
+    width: 100%;
+}
+
+.configLeft0 {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.configLeft0:hover {
+    background-color: #424549;
+}
+
+.configLeft {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0px 15px;
+}
+
+.configLeft:hover {
+    background-color: #424549;
+}
+
+/**/
+.configLeftOFF {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    margin: 0px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.2;
+}
+
+.configLeftOFF:hover {
+    opacity: 1;
+    background-color: #424549;
+}
+
+.mais,
+.explorar {
+    width: 20px;
+}
+
+.configProf {
+    width: 32px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.configIcon {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+
+}
+
+.configIconIcon {
+    width: 26px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.configIconIcon:hover {
+    background-color: #2e2e2e;
+    border-radius: 2px;
+}
+
+.words {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 10px;
+
+}
+
+.words p {
+    font-size: 12px;
+}
+
+/* LEFT */
+
+h2,
+h3 {
+    cursor: pointer;
+    padding: 7px 0;
+    margin: 7px 7px;
+}
+
+
+h2 {
+    color: rgb(230, 230, 230);
+    font-size: 20px;
+}
+
+h3:hover {
+    margin: 7px 7px;
+    color: white;
+    background-color: #424549;
+    border-radius: 5px;
+}
+
+.mainLeft {
+    display: flex;
+    width: 23%;
+    height: 100%;
+}
+
+.left2 {
+    border-radius: 2px;
+    background-color: #282b30;
+    color: gray;
+}
+
+/**/
+.title {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 1px -1px;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.hashtagS {
+    width: 14px;
+}
+
+.title h1 {
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+
+.logo {
+    width: 28px;
+}
+
+/**/
+.recep {
+    width: 22px;
+}
+
+
+.recepcao h2 {
+    padding: 10px 0;
+    display: flex;
+    color: rgb(179, 179, 179);
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+    gap: 5px;
+}
+
+/**/
+.areaP h2 {
+    padding: 10px 0;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    color: rgb(179, 179, 179);
+    text-align: left;
+    gap: 5px;
+}
+
+.home {
+    width: 22px;
+}
+
+/**/
+.chatV h2 {
+    padding: 10px 0;
+    display: flex;
+    color: rgb(179, 179, 179);
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+    gap: 5px;
+}
+
+.talk {
+    width: 22px;
+}
+
+.um {
+    width: 16px;
+}
+
+/**/
+/**/
+/**/
+
+/*== HEADER ==*/
+.header {
+    background-color: #1d2227;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h4 {
+    color: gray;
+    margin: 4px;
+}
+
+.headerIconIcon {
+    width: 18px;
+    cursor: pointer;
+}
+
+
+/*==== RIGHT RIGHT ====*/
+.mainRigh {
+    width: 57%;
+}
+
+.mainMain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.headerRight {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 1px -1px;
+    background-color: #36393e;
+}
+
+.Lheader {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.hashtag {
+    width: 23px;
+}
+
+.hashtag2 {
+    width: 22px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.hashtag2:hover {
+    opacity: 1;
+}
+
+.Rheader {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 55%;
+}
+
+.input {
+    background-color: #1d2227;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: gray;
+}
+
+/*== CONTENT ==*/
+.mainRight {
+    width: 77%;
+    display: flex;
+}
+
+.contentRight {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+
+}
+
+.welcome h1 {
+    color: white;
+}
+
+.red {
+    color: rgb(226, 47, 47);
+}
+
+.messenge {
+    display: flex;
+    flex-direction: column;
+}
+
+.m1 {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 0px 50px;
+    align-items: center;
+}
+
+.m1 p {
+    border: none;
+}
+
+.m1:hover {
+    background-color: #282b30;
+}
+
+.hour {
+    color: gray;
+    font-size: 11px;
+}
+
+.name2 {
+    color: rgb(41, 99, 165);
+}
+
+.name {
+    color: rgb(212, 59, 59);
+}
+
+.msg {
+    color: #fff;
+}
+
+/**/
+.m2P1 {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.cat {
+    margin-left: 50px;
+    border-radius: 5px;
+    width: 80%;
+    height: 400px;
+}
+
+.line {
+    position: relative;
+    padding: 0px 10px;
+}
+
+.middle {
+    top: 3px;
+    right: 38%;
+    padding: 0px 10px;
+    background-color: #30373f;
+    position: absolute;
+    text-align: center;
+}
+
+.lineAct {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(119, 119, 119);
+}
+
+.marg {
+    margin-bottom: 120px;
+}
+
+.content2 {
+    position: relative;
+}
+
+.barT {
+    width: 60.5%;
+    bottom: 0px;
+    padding: 20px;
+    position: fixed;
+    background-color: #30373f;
+    color: white;
+}
+
+.type {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 5px;
+    color: white;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    background-color: #424549;
+    border-radius: 5px;
+    border: none;
+}
+
+/*== LAST RIGHT ==*/
+
+.lastRight {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 60px;
+    width: 25%;
+}
+
+.mod {
+    color: orange;
+}
+
+.adm {
+    color: #009AE5;
+}
+
+.OnL {
+    color: rgb(22, 175, 22);
+}
+
+.bot {
+    color: purple;
+}
+
+.tag1 {
+    margin-left: 20px;
+    color: rgb(214, 6, 6);
+}
+
+.tag2 {
+    margin-left: 20px;
+    color: orange;
+}
+
+.tag3 {
+    margin-left: 20px;
+    color: #009AE5;
+}
+
+.tag4 {
+    margin-left: 20px;
+    color: purple;
+}
+
+.tag5 {
+    margin-left: 20px;
+    color: rgb(22, 175, 22);
+}
+
+.tag6 {
+    margin-left: 20px;
+    color: #c2c2c2;
+}
+
+
+.link {
+    text-decoration: none;
+    color: gray;
+}
+
+.link2 {
+    text-decoration: none;
+    color: #fff;
+}
